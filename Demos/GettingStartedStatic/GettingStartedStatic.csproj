@@ -143,6 +143,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>GettingStartedEx.mdf</DependentUpon>
     </Content>
+    <Content Include="SqlRepoEx1.1与2.0功能对比.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
