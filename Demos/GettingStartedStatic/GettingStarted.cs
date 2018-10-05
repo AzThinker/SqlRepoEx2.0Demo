@@ -47,7 +47,11 @@ namespace GettingStartedStatic
                      UnionSql.New(  results5,UnionType.Union ),
                      UnionSql.New(  results6,UnionType.Union )  });
 
+            var results3 = results.UnionSql(new List<UnionSql> {
+                     UnionSql.New(  results5,UnionType.Union ),
+                     UnionSql.New(  results6,UnionType.Union )  });
 
+            Console.WriteLine(results3);
 
 
             foreach (var item in results2)
