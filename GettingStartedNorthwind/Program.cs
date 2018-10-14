@@ -16,8 +16,8 @@ namespace GettingStartedNorthwind
         {
             Init();
 
-            GettingStarted.DoJoin();
-
+           // GettingStarted.DoJoin();
+            GettingStarted.DoProcedure();
             Console.ReadLine();
         }
 
