@@ -1,4 +1,13 @@
  
+
+# 2.0.7版本更新 2018.10.14
+## 1、修正部分错误
+## 2、优化代码
+## 3、增加代码注释
+
+2.0.4版本更新 2018.10.9
+1、修正分页错误
+2、SqlRepoEx.MsSql.ServiceCollection;与SqlRepoEx.MySql.ServiceCollection 命名空间错误修正
 # 2.0.3版本更新 2018.10.7
 ## 1、增加数据特性
 
