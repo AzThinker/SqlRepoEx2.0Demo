@@ -1,5 +1,21 @@
  
 
+# 2.0.8版本更新 2018.10.15
+
+## 1、修正部分错误
+## 2、优化代码
+## 3、增加代码注释
+
+# 注意：本次修改有两处重要变化,主要是拼写错误，现修正
+
+### 1、IdentityFiledAttribute，改为IdentityFildAttribute
+### 2、KeyFiledAttribute 改为 KeyFieldAttribute
+
+更改保留了原有特性，但不会长期支持并存，请使用新的特定标识
+
+</br>
+</br>
+
 # 2.0.7版本更新 2018.10.14
 
 ## 1、修正部分错误
