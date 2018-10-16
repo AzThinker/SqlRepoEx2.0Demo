@@ -11,6 +11,7 @@ namespace GettingStartedStatic
         {
             var connectionProvider = new AppConfigFirstConnectionProvider();
             MsSqlRepoFactory.UseConnectionProvider(connectionProvider);
+            MsSqlRepoFactory.UseStatementTransactionExecutor();
             var gettingStarted = new GettingStarted();
             // gettingStarted.DoIt();
             // gettingStarted.DoItJoin();
