@@ -28,6 +28,39 @@ namespace GettingStartedStatic
 
         }
 
+
+        public void DoTransactionIt()
+        {
+            var repository = MsSqlRepoFactory.Create<ToDo>();
+
+            
+
+            var results = repository.Query().Where(c => c.Id < 6);
+           
+
+            foreach (var item in results.Go())
+            {
+                Console.WriteLine($"{item.Id}\t {item.Task} ");
+            }
+           
+            using (var tranc = repository.GetConnectionProvider.BeginTransaction())
+            {
+                repository.Update().Set(c => c.Task, "A01").Where(c => c.Id == 1).Go();// A1
+                repository.Update().Set(c => c.Task, "B01").Where(c => c.Id == 2).Go();// B2
+
+                tranc.Rollback();
+            }
+
+
+
+            foreach (var item in results.Go())
+            {
+                Console.WriteLine($"{item.Id}\t {item.Task} ");
+            }
+            Console.WriteLine(results.Sql());
+
+        }
+
         public void DoItUnion()
         {
             var repository = MsSqlRepoFactory.Create<ToDo>();
