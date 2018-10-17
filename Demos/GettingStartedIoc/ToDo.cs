@@ -15,13 +15,14 @@ namespace GettingStartedIoC
         public bool IsCompleted { get; set; }
         public string Task { get; set; }
 
+        [IdentityField]
         public int Id { get; set; }
     }
 
     [TableName("DoitTest")]
     public class DoitTest_New
     {
-        [IdentityFiled]
+        [IdentityField]
         public int TestId { get; set; }
 
         public string TestRmk { get; set; }

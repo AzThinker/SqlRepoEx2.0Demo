@@ -1,15 +1,17 @@
 ﻿using System;
-
+using SqlRepoEx.Core.CustomAttribute;
 
 namespace GettingStartedDapper
 {
     public class ToDo
     {
+        [NonDatabaseField]
         public string Remark { get; set; }
         public DateTime CreatedDate { get; set; }
         public bool IsCompleted { get; set; }
         public string Task { get; set; }
 
+        [IdentityField]
         public int Id { get; set; }
     }
 

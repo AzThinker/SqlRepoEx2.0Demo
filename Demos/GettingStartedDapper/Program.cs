@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SqlRepoEx;
+using Dapper;
 using SqlRepoEx.Adapter.Dapper;
 using SqlRepoEx.Core;
 using SqlRepoEx.Static;
@@ -19,6 +22,36 @@ namespace GettingStartedDapper
             TestMySql();
             Console.ReadLine();
         }
+
+        public static void TestMySqlUpdate()
+        {
+            string ConnectionString = "datasource=127.0.0.1;username=test;password=test;database=sqlrepotest;charset=gb2312;SslMode = none;";
+            var connectionProvider = new MySQLP.ConnectionStringConnectionProvider(ConnectionString);
+            MySqlRepoFactory.UseConnectionProvider(connectionProvider);
+            MySqlRepoFactory.UseStatementExecutor(new DapperStatementExecutor(connectionProvider));
+            MySqlRepoFactory.UseDataReaderEntityMapper(new DapperEntityMapper());
+            MySqlRepoFactory.UseWritablePropertyMatcher(new SimpleWritablePropertyMatcher());
+            var repository11 = MySqlRepoFactory.Create<ToDo>();
+            var results11 = repository11.Query().Where(c => c.Id == 2).Go().FirstOrDefault();
+
+            results11.Task = "B21";
+
+
+            var rest2 = repository11.Update().For(results11);
+
+
+            Console.WriteLine(rest2.ParamSql());
+
+            var rest3 = rest2.ParamSqlWithEntity();
+
+            IDbConnection dbConnection = repository11.GetConnectionProvider.GetDbConnection;
+
+            // with dapper
+            dbConnection.Execute(rest3.paramsql, rest3.entity);
+
+
+        }
+
         public static void TestMySql()
         {
             string ConnectionString = "datasource=127.0.0.1;username=test;password=test;database=sqlrepotest;charset=gb2312;SslMode = none;";

@@ -9,6 +9,7 @@ using SqlRepoEx.Core.Abstractions;
 using SqlRepoEx.Static;
 using SqlRepoEx.MySql;
 using SqlRepoEx.MySql.ConnectionProviders;
+using System.Linq;
 
 namespace GettingStartedMySql
 
@@ -16,6 +17,25 @@ namespace GettingStartedMySql
 
     public class GettingStarted
     {
+
+
+        public void DoParam()
+        {
+
+            var repository = MySqlRepoFactory.Create<ToDo>();
+
+            var results = repository.Query().Where(c => c.Id == 6).Go().FirstOrDefault();
+
+            ToDo toDo = new ToDo();
+            toDo.Task = "Atk";
+
+
+            var resultinsert = repository.Insert().For(results);//.With(c => c.Task, "nkk");
+            Console.WriteLine(resultinsert.ParamSql());
+            var v = resultinsert.ParamSqlWithEntity();
+            Console.WriteLine(v.paramsql);
+        }
+
         public void DoIt()
         {
             var repository = MySqlRepoFactory.Create<ToDo>();

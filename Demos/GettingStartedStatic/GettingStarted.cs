@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using SqlRepoEx.Core;
 using SqlRepoEx.Static;
 
@@ -29,20 +30,38 @@ namespace GettingStartedStatic
         }
 
 
+        public void  DoParam()
+        {
+
+            var repository = MsSqlRepoFactory.Create<ToDo>();
+
+            var results = repository.Query().Where(c => c.Id == 6).Go().FirstOrDefault();
+
+            ToDo toDo = new ToDo();
+            toDo.Task = "Atk";
+
+
+            var resultinsert = repository.Insert().For(results);//.With(c => c.Task, "nkk");
+            Console.WriteLine(resultinsert.ParamSql());
+            var v = resultinsert.ParamSqlWithEntity();
+            Console.WriteLine(v.paramsql);
+        }
+
+
         public void DoTransactionIt()
         {
             var repository = MsSqlRepoFactory.Create<ToDo>();
 
-            
+
 
             var results = repository.Query().Where(c => c.Id < 6);
-           
+
 
             foreach (var item in results.Go())
             {
                 Console.WriteLine($"{item.Id}\t {item.Task} ");
             }
-           
+
             using (var tranc = repository.GetConnectionProvider.BeginTransaction())
             {
                 repository.Update().Set(c => c.Task, "A01").Where(c => c.Id == 1).Go();// A1

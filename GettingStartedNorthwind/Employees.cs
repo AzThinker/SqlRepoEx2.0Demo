@@ -11,7 +11,7 @@ namespace GettingStartedNorthwind
     public class Employees
     {
 
-        [KeyFiled]
+        [KeyField]
 
         public int EmployeeID { get; set; }
 

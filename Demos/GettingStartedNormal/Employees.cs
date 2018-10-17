@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SqlRepoEx.Core.CustomAttribute;
 
 namespace GettingStartedNormal
 {
     public class Employees
     {
         #region  业务属性定义
-
+        [IdentityField]
         /// <summary>
         ///EmployeeID_simpCN
         /// </summary>

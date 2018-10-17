@@ -13,7 +13,7 @@ namespace GettingStartedStatic
 
         public string Task { get; set; }
 
-        [IdentityFiled]
+        [IdentityField]
         public int Id { get; set; }
     }
 
@@ -22,9 +22,9 @@ namespace GettingStartedStatic
     {
 
         public string Remark { get; set; }
-        [KeyFiled]
+        [KeyField]
         public string Task { get; set; }
-        [IdentityFiled]
+        [IdentityField]
         public int Id { get; set; }
     }
 }

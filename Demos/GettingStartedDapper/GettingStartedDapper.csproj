@@ -54,23 +54,23 @@
     <Reference Include="MySql.Data, Version=8.0.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\..\packages\MySql.Data.8.0.12\lib\net452\MySql.Data.dll</HintPath>
     </Reference>
-    <Reference Include="SqlRepoEx.Adapter.Dapper, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SqlRepoEx.Adapter.Dapper.1.1.0\lib\netstandard2.0\SqlRepoEx.Adapter.Dapper.dll</HintPath>
+    <Reference Include="SqlRepoEx.Adapter.Dapper, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SqlRepoEx.Adapter.Dapper.1.2.0\lib\netstandard2.0\SqlRepoEx.Adapter.Dapper.dll</HintPath>
     </Reference>
-    <Reference Include="SqlRepoEx.Core, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SqlRepoEx.Core.2.1.0\lib\netstandard2.0\SqlRepoEx.Core.dll</HintPath>
+    <Reference Include="SqlRepoEx.Core, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SqlRepoEx.Core.2.2.0\lib\netstandard2.0\SqlRepoEx.Core.dll</HintPath>
     </Reference>
-    <Reference Include="SqlRepoEx.MsSql.Static, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SqlRepoEx.MsSql.Static.2.1.0\lib\netstandard2.0\SqlRepoEx.MsSql.Static.dll</HintPath>
+    <Reference Include="SqlRepoEx.MsSql.Static, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SqlRepoEx.MsSql.Static.2.2.0\lib\netstandard2.0\SqlRepoEx.MsSql.Static.dll</HintPath>
     </Reference>
-    <Reference Include="SqlRepoEx.MsSqlServer, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SqlRepoEx.MsSqlServer.2.1.0\lib\netstandard2.0\SqlRepoEx.MsSqlServer.dll</HintPath>
+    <Reference Include="SqlRepoEx.MsSqlServer, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SqlRepoEx.MsSqlServer.2.2.0\lib\netstandard2.0\SqlRepoEx.MsSqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="SqlRepoEx.MySql, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SqlRepoEx.MySql.2.1.0\lib\netstandard2.0\SqlRepoEx.MySql.dll</HintPath>
+    <Reference Include="SqlRepoEx.MySql, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SqlRepoEx.MySql.2.2.0\lib\netstandard2.0\SqlRepoEx.MySql.dll</HintPath>
     </Reference>
-    <Reference Include="SqlRepoEx.MySql.Static, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SqlRepoEx.MySql.Static.2.1.0\lib\netstandard2.0\SqlRepoEx.MySql.Static.dll</HintPath>
+    <Reference Include="SqlRepoEx.MySql.Static, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SqlRepoEx.MySql.Static.2.2.0\lib\netstandard2.0\SqlRepoEx.MySql.Static.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
